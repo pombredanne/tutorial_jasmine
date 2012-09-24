@@ -18,8 +18,6 @@ if (typeof JASMINE_ADAPTER !== 'undefined') {
 
   files = [JASMINE, JASMINE_ADAPTER];
 
-  exclude = angularFiles.jstdExclude;
-
   autoWatch = false;
   autoWatchInterval = 1;
   logLevel = LOG_INFO;
