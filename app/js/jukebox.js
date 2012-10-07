@@ -1,4 +1,7 @@
-var JukeBox = {
+'use strict';
+
+function JukeBox() {}
+JukeBox.prototype = {
   credit: 0,
   songs: {},
   now: "none",
@@ -45,5 +48,4 @@ var JukeBox = {
   song_finished: function() {
     this.now = "none";
   }
-
 };
