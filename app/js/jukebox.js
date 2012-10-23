@@ -30,11 +30,22 @@ JukeBox.prototype = {
   select: function(song) {
     if (song in this.songs) {
       var value = this.songs[song];
-      if (this.credit >= value) {
-        this.credit -= value;
-        this.now = song;
-      }
+      if (this._use(value))
+        this._play(song);
     }
+  },
+
+  _use: function(amount) {
+    if (this.credit >= amount) {
+      this.credit -= amount;
+      return true;
+    } else {
+      return false;
+    }
+  },
+
+  _play: function(song) {
+    this.now = song;
   },
 
   add_song: function(song, credits) {
