@@ -35,7 +35,7 @@ describe("JukeBox", function() {
     jukebox.select("Stairway to Heaven");
 
     expect(jukebox.credits()).toEqual(0);
-    expect(jukebox._use).wasCalledWith(2);
+    expect(jukebox._use).wasCalledWith(1);
     expect(jukebox.now_playing()).toEqual("Stairway to Heaven");
 
     jukebox.song_finished();
